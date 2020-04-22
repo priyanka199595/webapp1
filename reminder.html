@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container bg-info">
+    <class class="row ">
+        <class class="col-md-5 mx-auto">
+            <div class="card bg-info">
+                <div class="card header">
+                    <div class="display 4 text-center">
+                        Reminders
+                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="message" id="message" placeholder="make ppts" aria-label="">
+                                <span class="input-group-append">
+                                    <button class="btn btn-secondary" aria-label="save">Save</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                    {% if dataset %}
+                            <div class="class footer">
+                                <p class="lead">saved remainders</p>
+                                <hr>
+                                <ul class="list-group">
+                                    {% for item in dataset %}
+                                    <li class="list-group-item">{{ item }}</li>
+                                    {% endfor %}
+                                    
+                                </ul>
+                            </div>
+                    {% endif %}
+                    
+                </div>
+            </div>
+            
+        </class>
+    </class>
+    
+</div>
+{% endblock %}

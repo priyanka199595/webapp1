@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mt-5">
+            <div class="card bg-info text-white">
+                <div class="card-head">
+                    <div class="display-4 text-center text-warning">Matrix Garrix</div>
+                    <div class="lead text-center">the most amazing webapp</div>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="form-group">
+                          <label for="start">starting number</label>
+                          <input type="number"
+                            class="form-control" name="start" id="start" aria-describedby="starthelp" placeholder="enter a numeric value">
+                          <small id="starthelp" class="form-text text-muted">the starting value for the range</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="end">endvalue</label>
+                          <input type="number"
+                            class="form-control" name="end" id="end" aria-describedby="endhelp" placeholder="enter second number">
+                          <small id="endhelp" class="form-text text-muted">the ending value for the range</small>
+                        </div>
+                        <button class="btn btn-danger">generate</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mt-8">
+            <div class="card">
+                <div class="class-body">
+                    <div class="card-display-4">
+                        {{result}}
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
